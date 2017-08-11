@@ -123,29 +123,18 @@ Route::get('phone',function(){
 Route::post('/phone/complate','Mobile\PhoneController@Complates');
 
 //前台界面
-/*
-Route::group(['domain' => 'm.58lingshi.com'], function () {
+
+Route::group(['domain' => 'm.jisuanqi.com'], function () {
     Route::get('/', 'Mobile\MobileController@Index');
-    Route::get('ask','Mobile\MobileController@Indexask');
-    Route::get('ask/hot','Mobile\MobileController@HotAsks');
-    Route::get('ask/pending','Mobile\MobileController@PendingAsks');
-    Route::get('ask/page/{page}/','Mobile\MobileController@Indexask')->name('asklists');
-    Route::get('ask/pending/page/{page}/','Mobile\MobileController@PendingAsks')->name('askpendiglists');
-    Route::get('ask/hot/page/{page}/','Mobile\MobileController@HotAsks')->name('askhotlists');
-    Route::get('about','Mobile\StatementController@about');
-    Route::get('law','Mobile\StatementController@law');
-    //Route::get('map','Frontend\StatementController@map');
-    Route::get('contact','Mobile\StatementController@contact');
-    Route::get('ask/{id}.shtml','Mobile\MobileController@AskArticle');
-    Route::get('{path}','Mobile\MobileController@BrandLists');
-    Route::get('{path?}/page/{page}/','Mobile\MobileController@BrandLists')->name('pagelists');
-    Route::get('{path?}/{id}.shtml','Mobile\MobileController@BrandArticle');
-    Route::post('/phone/complate','Mobile\PhoneController@Complates');
-    Route::post('/phone/complate/list','Mobile\PhoneController@ComplateBrands');
+    Route::get('cost', 'Mobile\MobileController@Cost');
+    Route::get('profit', 'Mobile\MobileController@Profit');
 });
-*/
+
 Route::get('/','Frontend\IndexController@Index');
+Route::get('cost','Frontend\IndexController@Cost');
+Route::get('profit','Frontend\IndexController@Profit');
 Route::post('/costcomplate','Frontend\ComplateController@costComplate');
+Route::post('/profitcomplate','Frontend\ComplateController@profitComplate');
 Route::get('{path}','Frontend\BrandsController@BrandLists');
 Route::get('{path?}/page/{page}/','Frontend\BrandsController@BrandLists')->name('pagelists');
 Route::get('{path?}/{id}.shtml','Frontend\BrandArticleController@BrandArticle');

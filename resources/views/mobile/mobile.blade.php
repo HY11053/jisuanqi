@@ -8,103 +8,52 @@
     <meta name="applicable-device" content="mobile">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="csrf-token" content=" {{ csrf_token() }}">
-    <title>@yield('title')-58零食网</title>
+    <title>@yield('title')-计算器</title>
     <meta name="keywords" content="@yield('keywords')"/>
     <meta name="description" content="@yield('description')"/>
     <link rel="canonical" href="{{env('APP_URL')}}{{Request::getrequesturi()}}" >
-    <link rel="stylesheet" type="text/css" href="/mobiles/css/css.css">
-    <script type="text/javascript" src="/mobiles/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/mobiles/js/TouchSlide.1.1.js"></script>
-    <script type="text/javascript" src="/mobiles/js/index.js"></script>
+    <link href="/reception/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/reception/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-<div class="viewport">
-@include('mobile.header')
-@yield('main_content')
-    <div class="index_message">
-        <div class="message_tit"><span>在线留言</span><em>(客服将第一时间给您回电)</em></div>
-        <div class="mfdh clearfix">
-            <form onsubmit="return false;" >
-                <ul>
-                    <li>
-                        <label class="p-tips">姓名：</label>
-                        <input name="name" type="text"  class="name" id="name_msg" placeholder="如 王先生" value="">
-                    </li>
-                    <li>
-                        <label class="p-tips">手机：</label>
-                        <input name="phoneno" type="text" class="name" id="phone_msg" placeholder="如 13888888888" value="">
-                    </li>
-                    <li>
-                        <label class="p-tips">留言：</label>
-                        <textarea class="txt" name="note"  id="note_msg" cols="" rows="" placeholder="我对此项目很感兴趣，请联系我。"></textarea>
-                    </li>
-                </ul>
-                <input name="submit" id="submit_sub" type="submit" class="anniu" value="立即提交留言">
-            </form>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-header"> <a class="navbar-brand" href="#"><img src="/reception/bgimages/f_logo.png"/></a> </div>
         </div>
-    </div>
-    <div class="footer">
-        <div class="footer_nav">
-            <a href="/mobilesitemap.xml">网站地图</a>|<a href="/about/" rel="nofollow">关于我们</a>|<a href="/law/" rel="nofollow">免责声明</a>|<a href="{{env('APP_URL')}}">电脑版</a>
-        </div>
-        <div class="copyright">
-            <p>58零食网 沪ICP备16055116号-11</p>
-            <p>上海莫卡网络科技有限公司</p>
-        </div>
-    </div>
-</div>
 
-<div class="fixed_nav">
-    <ul>
-        <li>
-            <a href="/">
-                <i class="icon1"></i>
-                <p>首页</p>
-            </a>
-        </li>
-        <li>
-            <a href="javascript:void(0)">
-                <i class="icon2"></i>
-                <p>在线咨询</p>
-            </a>
-        </li>
-        <li>
-            <a href="javascript:void(0)" id="js_popup">
-                <i class="icon3"></i>
-                <p>快速留言</p>
-            </a>
-        </li>
-    </ul>
-</div>
-
-<div class="popup_mask">
-    <div class="popup">
-        <div class="hd">
-            <span class="tit">快速留言</span>
-            <em>(客服将第一时间给您回电)</em>
-            <a class="popup_close" href="#">关闭</a>
-        </div>
-        <div class="bd">
-            <ul>
-                <li>
-                    <label for="msg_name" class="label">姓名：</label>
-                    <input id="msg_name" class="input_bk" type="text" id="msg_name" name="msg_name" value="" placeholder="如 万先生">
-                </li>
-                <li>
-                    <label for="msg_phone" class="label">手机：</label>
-                    <input id="msg_phone" class="input_bk" type="text" id="msg_phone" name="msg_phone" value="" placeholder="如 13888888888">
-                </li>
-                <li>
-                    <label for="msg_cont" class="label">留言：</label>
-                    <textarea id="msg_cont" class="textarea_bk" type="text" id="msg_cont" name="msg_cont" value="" placeholder="我对此项目很感兴趣，请联系我。"></textarea>
-                </li>
-                <li>
-                    <input type="submit" value="立即提交留言" id="msg_sub" class="btn">
-                </li>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">干洗店加盟费计算器 <span class="sr-only">(current)</span></a></li>
+                <li><a href="/cost">干洗店成本计算器</a></li>
+                <li><a href="/profit">干洗店利润计算器</a></li>
+                <li><a href="#">干洗技术资料</a></li>
             </ul>
-        </div>
-    </div>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="viewport">
+@yield('main_content')
 </div>
+<script src="/reception/js/jquery.min.js"></script>
+<script src="/reception/js/bootstrap.min.js"></script>
+<script src="/reception/js/validator.js"></script>
+<script src="/reception/js/Chart.min.js"></script>
+<script src="/reception/js/tools.js"></script>
+<div>
+    <hr>
+    <p >Copyright © 2017 www.58lingshi.com Corporation, All Rights Reserved 上海莫卡网络科技有限公司 版权所有</p>
+</div>
+@yield('libs')
+
 </body>
 </html>

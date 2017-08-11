@@ -114,10 +114,10 @@
                             @foreach($articleUsers as $articleUser)
                             <div class="progress-group">
                                 <span class="progress-text">{{$articleUser}}</span>
-                                <span class="progress-number"><b>{{\App\AdminModel\Archive::where('created_at','>',\Carbon\Carbon::yesterday())->where('created_at','<',\Carbon\Carbon::now())->where('write',$articleUser)->count()}}</b>/25</span>
+                                <span class="progress-number"><b>{{\App\AdminModel\Archive::where('created_at','>',\Carbon\Carbon::today())->where('created_at','<',\Carbon\Carbon::now())->where('write',$articleUser)->count()}}</b>/25</span>
 
                                 <div class="progress sm">
-                                    <div class="progress-bar progress-bar-{{$colorStyle[rand(0,4)]}}" style="width: {{sprintf("%.4f",\App\AdminModel\Archive::where('created_at','>',\Carbon\Carbon::yesterday())->where('created_at','<',\Carbon\Carbon::now())->where('write',$articleUser)->count()/25,0,-1)*100}}%"></div>
+                                    <div class="progress-bar progress-bar-{{$colorStyle[rand(0,4)]}}" style="width: {{sprintf("%.4f",\App\AdminModel\Archive::where('created_at','>',\Carbon\Carbon::today())->where('created_at','<',\Carbon\Carbon::now())->where('write',$articleUser)->count()/25,0,-1)*100}}%"></div>
                                 </div>
                             </div>
                             @endforeach
@@ -356,18 +356,34 @@
             var salesChart = new Chart(salesChartCanvas);
 
             var salesChartData = {
-                labels: ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日", "星期一"],
+                labels: [
+                    "星期{{\Carbon\Carbon::parse(date('Y-m-d H:i:s',strtotime(\Carbon\Carbon::now())-3600*24*7))->dayOfWeek}}",
+                    "星期{{\Carbon\Carbon::parse(date('Y-m-d H:i:s',strtotime(\Carbon\Carbon::now())-3600*24*6))->dayOfWeek}}",
+                    "星期{{\Carbon\Carbon::parse(date('Y-m-d H:i:s',strtotime(\Carbon\Carbon::now())-3600*24*5))->dayOfWeek}}",
+                    "星期{{\Carbon\Carbon::parse(date('Y-m-d H:i:s',strtotime(\Carbon\Carbon::now())-3600*24*4))->dayOfWeek}}",
+                    "星期{{\Carbon\Carbon::parse(date('Y-m-d H:i:s',strtotime(\Carbon\Carbon::now())-3600*24*3))->dayOfWeek}}",
+                    "星期{{\Carbon\Carbon::parse(date('Y-m-d H:i:s',strtotime(\Carbon\Carbon::now())-3600*24*2))->dayOfWeek}}",
+                    "星期{{\Carbon\Carbon::yesterday()->dayOfWeek}}", "星期{{\Carbon\Carbon::now()->dayOfWeek}}"
+                ],
                 datasets: [
 
                     {
-                        label: "加盟流程",
+                        label: "电话提交数据",
                         fillColor: "rgba(60,141,188,0.9)",
                         strokeColor: "rgba(60,141,188,0.8)",
                         pointColor: "#3b8bba",
                         pointStrokeColor: "rgba(60,141,188,1)",
                         pointHighlightFill: "#fff",
                         pointHighlightStroke: "rgba(60,141,188,1)",
-                        data: [20,15,25,11,8,7,15,22
+                        data: [
+                            {{\App\AdminModel\Phonemanage::where('created_at','>',date('Y-m-d H:i:s',strtotime(\Carbon\Carbon::today())-3600*24*7))->where('created_at','<',strtotime(\Carbon\Carbon::today())-3600*24*6)->count()}},
+                            {{\App\AdminModel\Phonemanage::where('created_at','>',date('Y-m-d H:i:s',strtotime(\Carbon\Carbon::today())-3600*24*6))->where('created_at','<',strtotime(\Carbon\Carbon::today())-3600*24*5)->count()}},
+                            {{\App\AdminModel\Phonemanage::where('created_at','>',date('Y-m-d H:i:s',strtotime(\Carbon\Carbon::today())-3600*24*5))->where('created_at','<',strtotime(\Carbon\Carbon::today())-3600*24*4)->count()}},
+                            {{\App\AdminModel\Phonemanage::where('created_at','>',date('Y-m-d H:i:s',strtotime(\Carbon\Carbon::today())-3600*24*4))->where('created_at','<',strtotime(\Carbon\Carbon::today())-3600*24*3)->count()}},
+                            {{\App\AdminModel\Phonemanage::where('created_at','>',date('Y-m-d H:i:s',strtotime(\Carbon\Carbon::today())-3600*24*3))->where('created_at','<',strtotime(\Carbon\Carbon::today())-3600*24*2)->count()}},
+                            {{\App\AdminModel\Phonemanage::where('created_at','>',date('Y-m-d H:i:s',strtotime(\Carbon\Carbon::today())-3600*24*2))->where('created_at','<',strtotime(\Carbon\Carbon::today())-3600*24*1)->count()}},
+                            {{\App\AdminModel\Phonemanage::where('created_at','>',\Carbon\Carbon::yesterday())->where('created_at','<',\Carbon\Carbon::today())->count()}},
+                            {{\App\AdminModel\Phonemanage::where('created_at','>',\Carbon\Carbon::today())->count()}}
                         ]
                     }
                 ]

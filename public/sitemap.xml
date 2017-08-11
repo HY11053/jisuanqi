@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
         <urlset><url>
-        <loc>http://www.ucccms.com</loc>
+        <loc>www.jisuanqi.com</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         </url><url>
-                <loc>http://www.ucccms.com/lirun/</loc>
+                <loc>www.jisuanqi.com/chengben/</loc>
                 <changefreq>daily</changefreq>                
                 <priority>1.0</priority>
             </url><url>
-                <loc>http://www.ucccms.com/lirun/1.shtml</loc>
-                <lastmod>2017-07-29</lastmod>
+                <loc>www.jisuanqi.com/chengben/1.shtml</loc>
+                <lastmod>2017-08-09</lastmod>
                 <changefreq>daily</changefreq>
                 <priority>1.0</priority>
             </url><url>
-                <loc>http://www.ucccms.com/lirun/3.shtml</loc>
-                <lastmod>2017-07-29</lastmod>
+                <loc>www.jisuanqi.com/chengben/2.shtml</loc>
+                <lastmod>2017-08-10</lastmod>
                 <changefreq>daily</changefreq>
                 <priority>1.0</priority>
             </url></urlset>

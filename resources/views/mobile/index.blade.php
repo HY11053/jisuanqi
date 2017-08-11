@@ -1,207 +1,237 @@
 @extends('mobile.mobile')
-@section('title') {{ config('app.webname', '零食加盟网') }} @stop
-@section('keywords') {{ config('app.keywords', '零食加盟网') }} @stop
-@section('description') {{ config('app.description', '零食加盟网') }} @stop
 @section('main_content')
-    <div class="index_nav">
-        <ul>
-            @foreach($headers as $index=>$header)
-
-            <li><a href="/{{$header->real_path}}/" class="icon{{$index}}"><em></em>{{$header->typename}}</a></li>
-            @endforeach
-        </ul>
-    </div>
-    <div class="index_item">
-        <div class="common_tit">
-            <a class="tit" href="/{{\App\AdminModel\Arctype::where('id',1)->value('real_path')}}/">零食品牌</a>
-        </div>
-        <div class="bd">
-            <ul>
-                @foreach($lingshibrands as $lingshibrand)
-                <li>
-                    <a href="/{{$lingshibrand->arctype->real_path}}/{{$lingshibrand->id}}.shtml">
-                        <div class="img_show"><img src="{{$lingshibrand->litpic}}"/></div>
-                        <div class="cont">
-                            <p class="tit">{{$lingshibrand->shorttitle}}</p>
-                            <p class="desc">{{str_limit($lingshibrand->description,26,'...')}}</p>
-                            <p class="price">投资金额：<em>￥{{$lingshibrand->article->brandpay}}</em></p>
-                        </div>
-                    </a>
-                </li>
-                @endforeach
-            </ul>
-        </div>
-        <div class="list">
-            <ul>
-                @foreach($lingshibrandls as $index=>$lingshibrandl)
-                <li>
-                    <a href="/{{$lingshibrandl->arctype->real_path}}/{{$lingshibrandl->id}}.shtml">
-                        <i>{{$index+1}}</i><span>{{$lingshibrandl->shorttitle}}</span><em>已有{{$lingshibrandl->article->brandapply}}人申请</em>
-                    </a>
-                </li>
-              @endforeach
-            </ul>
-        </div>
-    </div>
-    <div class="index_item">
-        <div class="common_tit">
-            <a class="tit" href="/{{\App\AdminModel\Arctype::where('id',3)->value('real_path')}}/">炒货品牌</a>
-        </div>
-        <div class="bd">
-            <ul>
-                @foreach($chaohuobrands as $chaohuobrand)
-                    <li>
-                        <a href="/{{$chaohuobrand->arctype->real_path}}/{{$chaohuobrand->id}}.shtml">
-                            <div class="img_show"><img src="{{$chaohuobrand->litpic}}"/></div>
-                            <div class="cont">
-                                <p class="tit">{{$chaohuobrand->shorttitle}}</p>
-                                <p class="desc">{{str_limit($chaohuobrand->description,26,'...')}}</p>
-                                <p class="price">投资金额：<em>￥{{$chaohuobrand->article->brandpay}}</em></p>
-                            </div>
-                        </a>
-                    </li>
-                @endforeach
-
-            </ul>
-        </div>
-        <div class="list">
-            <ul>
-                @foreach($chaohuobrandls as $index=>$chaohuobrandl)
-                    <li>
-                        <a href="/{{$chaohuobrandl->arctype->real_path}}/{{$chaohuobrandl->id}}.shtml">
-                            <i>{{$index+1}}</i><span>{{$chaohuobrandl->shorttitle}}</span><em>已有{{$chaohuobrandl->article->brandapply}}人申请</em>
-                        </a>
-                    </li>
-                @endforeach
-            </ul>
-        </div>
-    </div>
-    <div class="index_item">
-        <div class="common_tit">
-            <a class="tit" href="/{{\App\AdminModel\Arctype::where('id',4)->value('real_path')}}/">干果品牌</a>
-        </div>
-        <div class="bd">
-            <ul>
-                @foreach($ganguobrands as $ganguobrand)
-                    <li>
-                        <a href="/{{$ganguobrand->arctype->real_path}}/{{$ganguobrand->id}}.shtml">
-                            <div class="img_show"><img src="{{$ganguobrand->litpic}}"/></div>
-                            <div class="cont">
-                                <p class="tit">{{$ganguobrand->shorttitle}}</p>
-                                <p class="desc">{{str_limit($ganguobrand->description,26,'...')}}</p>
-                                <p class="price">投资金额：<em>￥{{$ganguobrand->article->brandpay}}</em></p>
-                            </div>
-                        </a>
-                    </li>
-                @endforeach
-
-            </ul>
-        </div>
-        <div class="list">
-            <ul>
-                @foreach($ganguobrandls as $index=>$ganguobrandl)
-                    <li>
-                        <a href="/{{$ganguobrandl->arctype->real_path}}/{{$ganguobrandl->id}}.shtml">
-                            <i>{{$index+1}}</i><span>{{$ganguobrandl->shorttitle}}</span><em>已有{{$ganguobrandl->article->brandapply}}人申请</em>
-                        </a>
-                    </li>
-                @endforeach
-
-            </ul>
+    <div class="container nbgmain">
+        <div class="row ">
+        <form class="form-horizontal col-xs-10 col-xs-offset-1 "  onsubmit="return false;">
+            <div class="form-group">
+                <label class="sr-only" for="dpmj">店铺面积</label>
+                <div class="input-group">
+                    <div class="input-group-addon">店铺面积$</div>
+                    <input type="text" class="form-control" id="dpmj" name="dpmj" required="required" type="number" placeholder="店铺面积">
+                    <div class="input-group-addon">.㎡</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="zxfy">装修费用</label>
+                <div class="input-group">
+                    <div class="input-group-addon">装修费用$</div>
+                    <input type="text" class="form-control" name="zxfy" id="zxfy" required="required" placeholder="装修费用">
+                    <div class="input-group-addon">.00</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="jdfz">季度房租</label>
+                <div class="input-group">
+                    <div class="input-group-addon">季度房租$</div>
+                    <input type="text" class="form-control" id="jdfz" name="jdfz" required="required" placeholder="季度房租">
+                    <div class="input-group-addon">.00</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="sbfy">设备费用</label>
+                <div class="input-group">
+                    <div class="input-group-addon">设备费用$</div>
+                    <input type="text" class="form-control" id="sbfy" name="sbfy" required="required" placeholder="设备费用">
+                    <div class="input-group-addon">.00</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="ldzj">流动资金</label>
+                <div class="input-group">
+                    <div class="input-group-addon">流动资金$</div>
+                    <input type="text" class="form-control" id="ldzj" name="ldzj" required="required" placeholder="流动资金">
+                    <div class="input-group-addon">.00</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="rgkz">人工开支</label>
+                <div class="input-group">
+                    <div class="input-group-addon">人工开支$</div>
+                    <input type="text" class="form-control" id="rgkz" name="rgkz" required="required" placeholder="人工开支">
+                    <div class="input-group-addon">.00</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="gssy">工商税务</label>
+                <div class="input-group">
+                    <div class="input-group-addon">工商税务$</div>
+                    <input type="text" class="form-control" id="gssy" required="required" placeholder="工商税务">
+                    <div class="input-group-addon">.00</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="sdfy">水电 / 月</label>
+                <div class="input-group">
+                    <div class="input-group-addon">水电 / 月$</div>
+                    <input type="text" class="form-control" id="sdfy" name="sdfy" required="required" placeholder="水电 / 月">
+                    <div class="input-group-addon">.00</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="jmfy">加盟费用</label>
+                <div class="input-group">
+                    <div class="input-group-addon">加盟费用$</div>
+                    <input type="text" class="form-control" required="required" id="jmfy" name="jmfy" placeholder="加盟费用">
+                    <div class="input-group-addon">.00</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="phoneno">验证信息</label>
+                <div class="input-group">
+                    <div class="input-group-addon">验证信息$</div>
+                    <input type="phone"  id="phone" name="phone" required="required" class="form-control"  placeholder="请输入您的手机号码">
+                    <div class="input-group-addon">.00</div>
+                </div>
+            </div>
+            <button type="submit"  id="sub_btn" class="btn btn-primary">费用计算</button>
+        </form>
         </div>
     </div>
-    <div class="index_item">
-        <div class="common_tit">
-            <a class="tit" href="/{{\App\AdminModel\Arctype::where('id',1)->value('real_path')}}/">进口零食品牌</a>
+    <div class="col-xs-12 " >
+        <div class="x_panel">
+            <div class="x_title">
+                <h2 class="text-left newfontSize">干洗店加盟费用 <small>饼状图</small></h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content" id="x_content">
+                <canvas id="pieChart"></canvas>
+            </div>
         </div>
-        <div class="bd">
-            <ul>
-                @foreach($jinkoubrands as $jinkoubrand)
-                    <li>
-                        <a href="/{{$jinkoubrand->arctype->real_path}}/{{$jinkoubrand->id}}.shtml">
-                            <div class="img_show"><img src="{{$jinkoubrand->litpic}}"/></div>
-                            <div class="cont">
-                                <p class="tit">{{$jinkoubrand->shorttitle}}</p>
-                                <p class="desc">{{str_limit($jinkoubrand->description,26,'...')}}</p>
-                                <p class="price">投资金额：<em>￥{{$jinkoubrand->article->brandpay}}</em></p>
-                            </div>
-                        </a>
-                    </li>
-                @endforeach
-
-            </ul>
-        </div>
-        <div class="list">
-            <ul>
-                @foreach($jinkoubrandls as $index=>$jinkoubrandl)
-                    <li>
-                        <a href="/{{$jinkoubrandl->arctype->real_path}}/{{$jinkoubrandl->id}}.shtml">
-                            <i>{{$index+1}}</i><span>{{$jinkoubrandl->shorttitle}}</span><em>已有{{$jinkoubrandl->article->brandapply}}人申请</em>
-                        </a>
-                    </li>
-                @endforeach
-
-            </ul>
-        </div>
-    </div>
-    <div class="index_item">
-        <div class="common_tit">
-            <span class="tit" >最新品牌</span>
-        </div>
-        <div class="bd">
-            <ul>
-                @foreach($newbrands as $newbrand)
-                    <li>
-                        <a href="/{{$newbrand->arctype->real_path}}/{{$newbrand->id}}.shtml">
-                            <div class="img_show"><img src="{{$newbrand->litpic}}"/></div>
-                            <div class="cont">
-                                <p class="tit">{{$newbrand->shorttitle}}</p>
-                                <p class="desc">{{str_limit($newbrand->description,26,'...')}}</p>
-                                <p class="price">投资金额：<em>￥{{$newbrand->article->brandpay}}</em></p>
-                            </div>
-                        </a>
-                    </li>
-                @endforeach
-
-            </ul>
-        </div>
-        <div class="list">
-            <ul>
-                @foreach($newbrandls as $index=>$newbrandl)
-                    <li>
-                        <a href="/{{$newbrandl->arctype->real_path}}/{{$newbrandl->id}}.shtml">
-                            <i>{{$index+1}}</i><span>{{$newbrandl->shorttitle}}</span><em>已有{{$newbrandl->article->brandapply}}人申请</em>
-                        </a>
-                    </li>
-                @endforeach
-
-            </ul>
-        </div>
-    </div>
-    <div class="index_news">
-        <div class="common_tit">
-            <a class="more" href="/{{\App\AdminModel\Arctype::where('id',2)->value('real_path')}}/">更多&gt;&gt;</a>
-            <a class="tit" href="/{{\App\AdminModel\Arctype::where('id',2)->value('real_path')}}/">加盟快讯</a>
-        </div>
-        <div class="bd">
-            <ul>
-                @foreach($newsarticles as $newsarticle)
-                <li><span class="date">{{$newsarticle->published_at}}</span><a class="txt" href="/{{$newsarticle->arctype->real_path}}/{{$newsarticle->id}}.shtml">{{$newsarticle->title}}</a></li>
-            @endforeach
-            </ul>
+        <hr/>
+        <div class="x_panel">
+            <div class="x_title">
+                <h2 class="text-left newfontSize">干洗店加盟费用 <small>计算详情</small></h2>
+                <div class="clearfix" >
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>投资类目</th>
+                                <th>金额</th>
+                                <th>占比</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">装修费用</th>
+                                <td id="zxpay"> 3000</td>
+                                <td id="zxproportion"> %10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">季度房租</th>
+                                <td id="jdpay"> 3000</td>
+                                <td id="jdproportion"> %10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">设备费用</th>
+                                <td id="sbpay"> 3000</td>
+                                <td id="sbproportion"> %10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">流动资金</th>
+                                <td id="ldpay"> 3000</td>
+                                <td id="ldproportion"> %10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">人工开支</th>
+                                <td id="kzpay"> 3000</td>
+                                <td id="kzproportion"> %10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">工商税务</th>
+                                <td id="gspay"> 3000</td>
+                                <td id="gsproportion"> %10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">水电 / 月</th>
+                                <td id="sdpay"> 3000</td>
+                                <td id="sdproportion"> %10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">加盟费用</th>
+                                <td id="jmpay"> 3000</td>
+                                <td id="jmproportion"> %10</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="index_news">
-        <div class="common_tit">
-            <a class="more" href="/ask/">更多&gt;&gt;</a>
-            <a class="tit" href="/ask/">创业指南</a>
-        </div>
-        <div class="bd">
+
+    <div class="container">
+        <div style="clear:both;"></div>
+        <div id="note01" class="mainbottom ">
             <ul>
-                @foreach($asks as $ask)
-                <li><span class="date">{{$ask->created_at}}</span><a class="txt" href="/ask/{{$ask->id}}.shtml">{{$ask->title}}</a></li>
-               @endforeach
+                <li class="STYLE2">房贷计算器最新2017：房贷利率已经更新至2017年4月1日</li>
+                <li><strong class="red">等额本息还款：</strong>把按揭贷款的本金总额与利息总额相加，然后平均分摊到还款期限的每个月中。作为还款人，每个月还给银行固定金额，但每月还款额中的本金比重逐月递增、利息比重逐月递减。</li>
+                <li><strong class="red">等额本金还款：</strong>将本金分摊到每个月内,同时付清上一交易日至本次还款日之间的利息。这种还款方式相对等额本息而言,总的利息支出较低,但是前期支付的本金和利息较多,还款负担逐月递减。</li>
+                <li> <strong class="red">2017年公积金贷款最高额度说明（具体规定参考地方房管局文件）</strong><br />
+                    北京：市管公积金贷款最高120万元，国管公积金最高贷款120万元<br />
+                    上海：个人公积金贷款最高60万元，家庭最高贷款120万元<br />
+                    广州：个人公积金贷款最高60万元，夫妻双方最高贷款100万元<br />
+                    成都：个人公积金贷款最高40万元，家庭公积金贷款最高70万元，成都公积金贷款额度为个人缴存余额20倍</li>
             </ul>
         </div>
+        <!--推荐文章 开始-->
+        <div class="w980">
+            <div class="rec_news_wrap">
+                <div class="rec_news">
+                    <div class="hd"><a href="#" target="_blank">干洗店加盟费用计算器</a></div>
+                    <div class="bd">
+                        <ul>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">2014提前还房贷攻略：两类人可提前还款</a></li>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷转按揭全过程解析 必看注意事项</a></li>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷提前还款怎么办 各大银行违约金吓掉你</a></li>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">三种情况不合适提前还贷 看看你属于哪类</a></li>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">2014提前还房贷攻略：两类人可提前还款</a></li>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷转按揭全过程解析 必看注意事项</a></li>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷提前还款怎么办 各大银行违约金吓掉你</a></li>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">三种情况不合适提前还贷 看看你属于哪类</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="rec_news">
+                    <div class="hd"><a href="#" target="_blank">干洗店加盟费用计算器</a></div>
+                    <div class="bd">
+                        <ul>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">2014提前还房贷攻略：两类人可提前还款</a></li>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷转按揭全过程解析 必看注意事项</a></li>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷提前还款怎么办 各大银行违约金吓掉你</a></li>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">三种情况不合适提前还贷 看看你属于哪类</a></li>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">2014提前还房贷攻略：两类人可提前还款</a></li>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷转按揭全过程解析 必看注意事项</a></li>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷提前还款怎么办 各大银行违约金吓掉你</a></li>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">三种情况不合适提前还贷 看看你属于哪类</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="rec_news">
+                    <div class="hd"><a href="#" target="_blank">干洗店加盟费用计算器</a></div>
+                    <div class="bd">
+                        <ul>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">2014提前还房贷攻略：两类人可提前还款</a></li>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷转按揭全过程解析 必看注意事项</a></li>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷提前还款怎么办 各大银行违约金吓掉你</a></li>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">三种情况不合适提前还贷 看看你属于哪类</a></li>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">2014提前还房贷攻略：两类人可提前还款</a></li>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷转按揭全过程解析 必看注意事项</a></li>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷提前还款怎么办 各大银行违约金吓掉你</a></li>
+                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">三种情况不合适提前还贷 看看你属于哪类</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--推荐文章 结束-->
+
     </div>
+
+@stop
+@section('libs')
+    <script src="/reception/js/chargeTools.js"></script>
 @stop

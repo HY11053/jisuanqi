@@ -18,8 +18,6 @@
                             <th style="width: 10px">#ID</th>
                             <th>姓名</th>
                             <th>电话</th>
-                            <th>性别</th>
-                            <th>地址</th>
                             <th>备注</th>
                             <th>来源</th>
                             <th>提交页面</th>
@@ -32,8 +30,6 @@
                             <td>{{$adminlist->id}}.</td>
                             <td>{{$adminlist->name}}</td>
                             <td>{{$adminlist->phoneno}}</td>
-                            <td>{{$adminlist->gender}}</td>
-                            <td>{{$adminlist->address}}</td>
                             <td>{{str_limit($adminlist->note,30,'')}}</td>
                             <td>{{str_limit($adminlist->referer,30,'...')}}</td>
                            <td>{{$adminlist->host}}</td>

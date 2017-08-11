@@ -27,14 +27,15 @@
     <div class="container-fluid">
         <div class="header">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header"> <a class="navbar-brand" href="#"><img src="/reception/bgimages/f_logo.png"/></a> </div>
+            <div class="navbar-header"> <a class="navbar-brand" href="/"><img src="/reception/bgimages/f_logo.png"/></a> </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/">干洗店加盟费计算器</a></li>
-                    <li><a href="chengbenjisuanqi.html">干洗店成本计算器</a></li>
-                    <li><a href="lirunjisuanqi.html">干洗店利润计算器</a></li>
+                    <li><a href="/cost">干洗店成本计算器</a></li>
+                    <li><a href="/profit">干洗店利润计算器</a></li>
+                    <li><a href="/profit">干洗技术资料</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -56,8 +57,6 @@
 <script src="/reception/js/validator.js"></script>
 <script src="/reception/js/Chart.min.js"></script>
 <script src="/reception/js/tools.js"></script>
-<script>
-
-</script>
+@yield('libs')
 </body>
 </html>

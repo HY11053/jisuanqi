@@ -167,7 +167,5 @@ class AdminController extends Controller
         $admin=Admin::find(auth('admin')->user()->id);
         $admin->unreadNotifications->markAsRead();
         return redirect()->back();
-
     }
-
 }

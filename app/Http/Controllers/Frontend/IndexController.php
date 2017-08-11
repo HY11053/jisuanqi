@@ -11,11 +11,19 @@ use App\Http\Controllers\Controller;
 
 class IndexController extends Controller
 {
-    function Index()
+   public function Index()
     {
 
         //友情链接
         $flinks=flink::latest()->orderBy('created_at','desc')->take(30)->get();
         return view('frontend.index',compact('flinks'));
+    }
+    public function Cost()
+    {
+        return view('frontend.cost');
+    }
+    public function Profit()
+    {
+        return view('frontend.profit');
     }
 }
