@@ -35,7 +35,6 @@
                     <li class="active"><a href="/">干洗店加盟费计算器</a></li>
                     <li><a href="/cost">干洗店成本计算器</a></li>
                     <li><a href="/profit">干洗店利润计算器</a></li>
-                    <li><a href="/profit">干洗技术资料</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

@@ -135,7 +135,7 @@ Route::get('cost','Frontend\IndexController@Cost');
 Route::get('profit','Frontend\IndexController@Profit');
 Route::post('/costcomplate','Frontend\ComplateController@costComplate');
 Route::post('/profitcomplate','Frontend\ComplateController@profitComplate');
-Route::get('{path}','Frontend\BrandsController@BrandLists');
-Route::get('{path?}/page/{page}/','Frontend\BrandsController@BrandLists')->name('pagelists');
+//Route::get('{path}','Frontend\BrandsController@BrandLists');
+//Route::get('{path?}/page/{page}/','Frontend\BrandsController@BrandLists')->name('pagelists');
 Route::get('{path?}/{id}.shtml','Frontend\BrandArticleController@BrandArticle');
 

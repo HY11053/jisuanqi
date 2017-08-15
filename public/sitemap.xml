@@ -4,17 +4,26 @@
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         </url><url>
-                <loc>www.jisuanqi.com/chengben/</loc>
+                <loc>www.jisuanqi.com/cost/</loc>
                 <changefreq>daily</changefreq>                
                 <priority>1.0</priority>
             </url><url>
-                <loc>www.jisuanqi.com/chengben/1.shtml</loc>
+                <loc>www.jisuanqi.com/profit/</loc>
+                <changefreq>daily</changefreq>                
+                <priority>1.0</priority>
+            </url><url>
+                <loc>www.jisuanqi.com/cost/1.shtml</loc>
                 <lastmod>2017-08-09</lastmod>
                 <changefreq>daily</changefreq>
                 <priority>1.0</priority>
             </url><url>
-                <loc>www.jisuanqi.com/chengben/2.shtml</loc>
-                <lastmod>2017-08-10</lastmod>
+                <loc>www.jisuanqi.com/cost/2.shtml</loc>
+                <lastmod>2017-08-15</lastmod>
+                <changefreq>daily</changefreq>
+                <priority>1.0</priority>
+            </url><url>
+                <loc>www.jisuanqi.com/cost/3.shtml</loc>
+                <lastmod>2017-08-15</lastmod>
                 <changefreq>daily</changefreq>
                 <priority>1.0</priority>
             </url></urlset>

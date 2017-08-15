@@ -127,3 +127,53 @@ span.section {    display: block;    width: 50%;    padding: 0;    margin-bottom
 .f_link .bd li{ float:left; margin-right:30px; height:25px; line-height:25px;}
 .f_link .bd li a{ color:#666;}
 .f_link .bd li a:hover{ color:#3A9D94;}
+
+
+/*文章内容*/
+.path{ width:980px; margin:0 auto; height:40px; line-height:40px; color:#999;}
+.path a{ color:#999;}
+.news_box{ width:980px; margin:0 auto;font-family:"微软雅黑";}
+.news_box .w730{ width:690px; padding:0 20px 20px 20px; float:left;border:1px solid #DDD; background:#fff; box-sizing:content-box;}
+.news_box .w230{ width:230px; float:right;}
+
+
+/*文章内容页*/
+.content_tit{ padding:40px 0 16px; }
+.content_tit h1{ text-align:center; font-size:24px; font-family:"微软雅黑"; color:#333; font-weight:bold;}
+.zaiyao{ background-color:#F3F3F3;  line-height:180%; padding:10px 28px; color:#666;}
+.zaiyao b{ color:#F54B10;}
+.time_source{ padding-top:20px; color:#999; text-align:center;}
+.fenxiangdaima{ float:right;}
+.content{ width:648px; overflow:hidden; padding:10px 0 16px 0; font-size:14px; line-height:200%; color:#333;}
+
+.nr_biaoqian { height:41px; line-height:41px; float:right;}
+
+.nr_biaoqian b{padding-left:20px; background:url(../images/biaoqian.jpg) no-repeat left center; float:left; font-weight:100; color:#666; }
+.nr_biaoqian a{  margin-left:12px;}
+.shangxiapian{ line-height:22px; padding:20px 0; color:#666; font-size:14px;}
+.shangxiapian p{ padding-bottom:5px;}
+
+.fenxiang{ height:41px; padding:14px 0; border-top:1px solid #ddd; border-bottom:1px solid #ddd; font-size:12px; box-sizing:content-box}
+.fenxiangdao{ float:left; line-height:41px; color:#666; margin-right:10px; font-size:12px;}
+.bdsharebuttonbox{ float:left;}
+.fenxiang .bdsharebuttonbox .bds_tsina,.fenxiang .bdsharebuttonbox .bds_qzone,.fenxiang  .bdsharebuttonbox .popup_weixin{float:left; width:41px; height:41px; text-indent:-9999px; padding:0; margin:0 8px 0 0;}
+.fenxiang .bdsharebuttonbox .bds_tsina{ background:url(../images/fenxiang.png) no-repeat; }
+.fenxiang .bdsharebuttonbox .bds_qzone{ background:url(../images/fenxiang.png) no-repeat -97px 0;}
+.fenxiang .bdsharebuttonbox .popup_weixin{ background:url(../images/fenxiang.png) no-repeat -48px 0;}
+
+
+/*文章内容页最新推荐*/
+.content_related{ overflow:hidden;}
+.content_related .common_bt{height:39px;border-bottom: 1px solid #D6D6D6; position: relative;}
+.content_related .common_bt .tit{height:38px; line-height:30px; font-size:20px; font-family:"微软雅黑"}
+.content_related ul{ width:720px; padding:20px 0; overflow:hidden;}
+.content_related li{ width:330px; float:left; margin-right:30px; background:url(../images/dot.gif) no-repeat 0px 5px; height:30px; line-height:30px; overflow:hidden; padding-left:12px; font-size:14px;}
+.content_related .date{ float:right; color:#999;}
+
+
+.side_recommend{margin-bottom:10px; background:#fff; border:1px solid #DDD; margin-bottom:10px;}
+
+.side_recommend .common_bt{ height:40px; line-height:40px; font-weight:bold; font-size:14px; padding-left:10px; border-bottom:2px solid #7eaabf;  position:relative;}
+
+.side_recommend .common_list{padding:10px 12px; }
+.side_recommend .common_list li{ background:url(../images/dot.gif) no-repeat 0px 5px; height:28px; line-height:28px; overflow:hidden; padding-left:12px;}

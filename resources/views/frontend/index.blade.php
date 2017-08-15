@@ -1,7 +1,7 @@
 @extends('frontend.frontend')
 @section('title') {{ config('app.webname', '干洗店加盟费用计算器') }}@stop
-@section('keywords') {{ config('app.keywords', '零食加盟网') }}@stop
-@section('description') {{ config('app.description', '零食加盟网') }}@stop
+@section('keywords') {{ config('app.keywords', '干洗店加盟费用计算器') }}@stop
+@section('description') {{ config('app.description', '干洗店加盟费用计算器') }}@stop
 @section('mainContent')
     <div class="leftbk0225">
         <div class="leftbk0225a">
@@ -178,7 +178,7 @@
             <div style="clear:both;"></div>
             <div id="note01" class="mainbottom ">
                 <ul>
-                    <li class="STYLE2">房贷计算器最新2017：房贷利率已经更新至2017年4月1日</li>
+                    <li class="STYLE2">干洗店加盟费用计算器最新2017：干洗店加盟费计算方式已更新至已经更新至2017年8月15日</li>
                     <li><strong class="red">等额本息还款：</strong>把按揭贷款的本金总额与利息总额相加，然后平均分摊到还款期限的每个月中。作为还款人，每个月还给银行固定金额，但每月还款额中的本金比重逐月递增、利息比重逐月递减。</li>
                     <li><strong class="red">等额本金还款：</strong>将本金分摊到每个月内,同时付清上一交易日至本次还款日之间的利息。这种还款方式相对等额本息而言,总的利息支出较低,但是前期支付的本金和利息较多,还款负担逐月递减。</li>
                     <li> <strong class="red">2017年公积金贷款最高额度说明（具体规定参考地方房管局文件）</strong><br />
@@ -196,7 +196,7 @@
     <div class="w980">
         <div class="rec_news_wrap">
             <div class="rec_news">
-                <div class="hd"><a href="#" target="_blank">干洗店加盟费用计算器</a></div>
+                <div class="hd">2017干洗店加盟费用计算器</div>
                 <div class="bd">
                     <ul>
                         <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">2014提前还房贷攻略：两类人可提前还款</a></li>
@@ -212,7 +212,7 @@
             </div>
 
             <div class="rec_news">
-                <div class="hd"><a href="#" target="_blank">干洗店加盟费用计算器</a></div>
+                <div class="hd"><a href="/cost" target="_blank">2017开干洗店成本计算器</a></div>
                 <div class="bd">
                     <ul>
                         <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">2014提前还房贷攻略：两类人可提前还款</a></li>
@@ -228,7 +228,7 @@
             </div>
 
             <div class="rec_news">
-                <div class="hd"><a href="#" target="_blank">干洗店加盟费用计算器</a></div>
+                <div class="hd"><a href="/profit" target="_blank">干洗店利润计算器</a></div>
                 <div class="bd">
                     <ul>
                         <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">2014提前还房贷攻略：两类人可提前还款</a></li>
