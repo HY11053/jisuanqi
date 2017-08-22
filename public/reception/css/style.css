@@ -1,20 +1,30 @@
 li{list-style-type: none;}
 ul{padding-left: 0px;}
-.nbgmain{background: url("../bgimages/jsq_title08a1.gif") ;background-size:100% auto;}
-.newfontSize{font-size: 16px;     color: red;     border-bottom: 1px solid #e5e5e5;}
+.nbgmain{background: url("../bgimages/jsq_title08a1.gif") ;background-size:100% auto; padding-bottom:15px;}
+.newfontSize{font-size: 16px; color:red; border-bottom: 1px solid #e5e5e5; padding-bottom:10px; font-weight:bold;}
 .newbg{background: #f1f8ea;}
-.rec_news .hd{ height:43px; line-height:43px; border-bottom:2px solid #7EAABF;  padding:0 15px; font-size:14px; font-weight:bold; color:#666;}
+.rec_news .hd{ height:43px; line-height:43px; border-bottom:2px solid #7EAABF;  padding:0 15px 0 0; font-size:14px; font-weight:bold; color:#666;}
 .rec_news .hd a{ color:#666;}
 .rec_news .hd a:hover{ color:#3A9D94;}
-.rec_news .bd{ padding:5px 12px;}
+.rec_news .bd{ padding:5px 0;}
 .rec_news .bd ul{padding-left: 0px;}
-.rec_news .bd li{ height:28px; line-height:28px; list-style-type: none; padding-left:15px;}
+.rec_news .bd li{ height:28px; line-height:28px; list-style-type: none; }
 .rec_news .bd li a{ color:#666;}
 .rec_news .bd li a:hover{ color:#3A9D94;}
 .f_link{width:100%; margin:0 auto;  background:#fff;}
-.f_link .hd{ height:43px; line-height:43px; padding:0 15px; font-size:14px; font-weight:bold; border-bottom:2px solid #7EAABF; color:#666;}
+.f_link .hd{ height:43px; line-height:43px; padding:0 15px 0 0; font-size:14px; font-weight:bold; border-bottom:2px solid #7EAABF; color:#666;}
 .f_link .hd a{color:#666;}
-.f_link .bd{ padding:15px 15px; overflow:hidden; zoom:1;}
+.f_link .bd{ padding:15px 0; overflow:hidden; zoom:1;}
 .f_link .bd li{ float:left; margin-right:30px; height:25px; line-height:25px;}
 .f_link .bd li a{ color:#666;}
 .f_link .bd li a:hover{ color:#3A9D94;}
+
+.footer{ text-align:center; border-top:1px solid #ccc; padding:10px 30px 0 30px; color:#666; font-size:12px;}
+.mainbottom{ line-height:25px; color:#666; padding-top:10px;}
+
+.content_tit{ padding:5px 0 5px; }
+.content_tit h1{ text-align:center; font-size:24px; line-height:30px; font-family:"微软雅黑"; color:#333; font-weight:bold; padding:0; margin:0;}
+.time_source{ padding-top:20px; color:#999; text-align:center;}
+.content{ width:100%; overflow:hidden; padding:10px 0 16px 0; font-size:14px; line-height:200%; color:#333;}
+.shangxiapian{ line-height:22px; padding:20px 0 10px 0; color:#666; font-size:14px;}
+.shangxiapian p{ padding-bottom:5px;}

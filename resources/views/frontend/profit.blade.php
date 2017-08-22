@@ -1,7 +1,7 @@
 @extends('frontend.frontend')
-@section('title') {{ config('app.webname', '干洗店加盟费用计算器') }}@stop
-@section('keywords') {{ config('app.keywords', '零食加盟网') }}@stop
-@section('description') {{ config('app.description', '零食加盟网') }}@stop
+@section('title') 干洗店利润计算器_2017最新干洗店详细了利润计算器@stop
+@section('keywords') 干洗店利润,干洗店利润计算,干洗店利润详细计算@stop
+@section('description') 干洗店利润计算器详细计算每日成交量、成交金额及各种投入后的产出比，图表展示干洗利润率，明确各个利润点，解详细干洗店利润就用干洗店利润计算器@stop
 @section('mainContent')
         <div class="leftbk0225">
             <div class="leftbk0225a">
@@ -162,14 +162,15 @@
                 <div style="clear:both;"></div>
                 <div id="note01" class="mainbottom ">
                     <ul>
-                        <li class="STYLE2">房贷计算器最新2017：房贷利率已经更新至2017年4月1日</li>
-                        <li><strong class="red">等额本息还款：</strong>把按揭贷款的本金总额与利息总额相加，然后平均分摊到还款期限的每个月中。作为还款人，每个月还给银行固定金额，但每月还款额中的本金比重逐月递增、利息比重逐月递减。</li>
-                        <li><strong class="red">等额本金还款：</strong>将本金分摊到每个月内,同时付清上一交易日至本次还款日之间的利息。这种还款方式相对等额本息而言,总的利息支出较低,但是前期支付的本金和利息较多,还款负担逐月递减。</li>
-                        <li> <strong class="red">2017年公积金贷款最高额度说明（具体规定参考地方房管局文件）</strong><br />
-                            北京：市管公积金贷款最高120万元，国管公积金最高贷款120万元<br />
-                            上海：个人公积金贷款最高60万元，家庭最高贷款120万元<br />
-                            广州：个人公积金贷款最高60万元，夫妻双方最高贷款100万元<br />
-                            成都：个人公积金贷款最高40万元，家庭公积金贷款最高70万元，成都公积金贷款额度为个人缴存余额20倍</li>
+                        <li class="STYLE2"><strong class="red">干洗店利润分析：</strong></li>
+                        <li>干洗店日常经营过程中，洗一件衣服收费6-15元,而所需要的洗衣原材料成本不足1元钱;在不变成本(房租及人员工资等，其中人员工资相对较低)不变的情况下，洗得多，赚得多。</li>
+                        <li><strong class="red"> 大中小城市投资回报比参考</strong><br />
+                            每多洗一件衣服,几乎在支出上只增加少量的洗衣原材料成本，而收入却增加5-15元，这样的投资项目在服务行业已经很难找到了。
+                            2017年国内干洗店利润统计平均数据(具体参考中国干洗行业协会统计文件)<br />
+                            一线城市(北上广)：90㎡大小的品牌干洗店，月预估净利润3.64万元，预期投资回报周期8个月<br />
+                            二线城市(省会)： 60㎡大小的品牌干洗店，月预估净利润2.32万元，预期投资回报周期8个月<br />
+                            三线城市(地级市)：30㎡大小的品牌干洗店，月预估净利润1.56万元，预期投资回报周期8个月<br />
+                            注：干洗行业有淡旺季之分，旺季干洗店利润翻番</li>
                     </ul>
                 </div>
                 <!--说明一 end-->
@@ -180,36 +181,9 @@
             <div class="hd">2017最新干洗店成本计算器资讯</div>
             <div class="bd">
                 <ul>
-                    <li><a href="#" target="_blank">房贷计算器最新2017</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2017</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2017</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2017</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2017</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2017</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
+                    @foreach($profitArticles as $article)
+                        <li><a href="/{{$article->arctype->real_path}}/{{$article->id}}.shtml" target="_blank">{{$article->title}}</a></li>
+                    @endforeach
                 </ul>
             </div>
         </div>

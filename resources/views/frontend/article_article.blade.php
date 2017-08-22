@@ -2,27 +2,13 @@
 @section('title') {{$thisarticleinfos->title}} @stop
 @section('keywords') {{$thisarticleinfos->keywords}} @stop
 @section('description')  {{$thisarticleinfos->description}} @stop
-@section('headlibs')
-    <meta name="Copyright" content="58零食网-{{env('APP_URL')}}"/>
-    <meta name="author" content="58零食网" />
-    <meta http-equiv="mobile-agent" content="format=wml; url={{str_replace('http://www.','http://m.',env('APP_URL'))}}{{Request::getrequesturi()}}" />
-    <meta http-equiv="mobile-agent" content="format=xhtml; url={{str_replace('http://www.','http://m.',env('APP_URL'))}}{{Request::getrequesturi()}}" />
-    <meta http-equiv="mobile-agent" content="format=html5; url={{str_replace('http://www.','http://m.',env('APP_URL'))}}{{Request::getrequesturi()}}" />
-    <link rel="alternate" media="only screen and(max-width: 640px)" href="{{str_replace('http://www.','http://m.',env('APP_URL'))}}{{Request::getrequesturi()}}" >
-    <link rel="canonical" href="{{env('APP_URL')}}{{Request::getrequesturi()}}"/>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="{{$thisarticleinfos->created_at}}+08:00" /> <meta property="og:image" content="{{env('APP_URL')}}{{$thisarticleinfos->litpic}}"/>
-    <meta property="article:author" content="58零食网" />
-    <meta property="article:published_first" content="58零食网, {{env('APP_URL')}}{{Request::getrequesturi()}}" />
-    <link rel="stylesheet" type="text/css" href="/reception/css/news.css"/>
-@stop
 @section('mainContent')
-    <div class="path">当前位置：<a href="#">首页</a> &gt; <a href="#">零售行业资讯</a></div>
+    <div class="path">当前位置：<a href="/">首页</a> &gt; 内容资讯</div>
     <div class="news_box clearfix">
         <div class="w730">
             <div class="content_tit">
                 <h1>{{$thisarticleinfos->title}}</h1>
-                <div class="time_source">时间：{{$thisarticleinfos->created_at}}&nbsp;&nbsp;|&nbsp;&nbsp;编辑：小燕&nbsp;&nbsp;|&nbsp;&nbsp;查看：{!! $thisarticleinfos->click !!}次</div>
+                <div class="time_source">时间：{{$thisarticleinfos->created_at}}&nbsp;&nbsp;|&nbsp&nbsp;&nbsp;|&nbsp;&nbsp;查看：{!! $thisarticleinfos->click !!}次</div>
             </div>
             <div class="zaiyao"><b>摘要：</b>{!! $thisarticleinfos->description !!}</div>
 
@@ -57,18 +43,10 @@
                     <div class="tit">相关资讯</div>
                 </div>
                 <ul>
-                    <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">干洗加盟店选址注意事项</a></li>
-                    <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">想要开好干洗店必须知道的事</a></li>
-                    <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">长假期间干洗加盟店要注意哪些事</a></li>
-                    <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">秋季散装休闲干洗如何储存</a></li>
-                    <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">开休闲干洗加盟店日常小道具</a></li>
-                    <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">干洗加盟店选址注意事项</a></li>
-                    <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">干洗加盟店选址注意事项</a></li>
-                    <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">想要开好干洗店必须知道的事</a></li>
-                    <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">长假期间干洗加盟店要注意哪些事</a></li>
-                    <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">秋季散装休闲干洗如何储存</a></li>
-                    <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">开休闲干洗加盟店日常小道具</a></li>
-                    <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">干洗加盟店选址注意事项</a></li>
+                    @foreach($xgnews as $xgnew)
+                    <li><a href="/{{$xgnew->arctype->real_path}}/{{$xgnew->id}}.shtml" target="_blank" title="{{$xgnew->title}}">{{$xgnew->title}}</a></li>
+                   @endforeach
+
                 </ul>
             </div>
             <!--相关阅读结束-->
@@ -81,16 +59,9 @@
                 </div>
                 <div class="common_list">
                     <ul>
-                        <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">现在投资开一家干洗店可以赚钱吗</a></li>
-                        <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">经营干洗店有哪些好的方法</a></li>
-                        <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">在南京投资开一家干洗店赚钱吗</a></li>
-                        <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">秋季散装休闲干洗如何储存</a></li>
-                        <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">在南京投资开一家干洗店赚钱吗</a></li>
-                        <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">经营干洗店有哪些好的方法</a></li>
-                        <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">在南京投资开一家干洗店赚钱吗</a></li>
-                        <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">经营干洗店有哪些好的方法</a></li>
-                        <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">秋季散装休闲干洗如何储存</a></li>
-                        <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">开休闲干洗加盟店日常小道具</a></li>
+                        @foreach($costArticles as $costArticle)
+                        <li><a href="/{{ $costArticle->arctype->real_path}}/{{$costArticle->id}}.shtml" target="_blank" title="{{$costArticle->title}}">{{$costArticle->title}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -99,20 +70,13 @@
             <!--右侧推荐文章开始-->
             <div class="side_recommend">
                 <div class="common_bt">
-                    <div class="tit"><a href="#" target="_blank">干洗店加盟费用计算器</a></div>
+                    <div class="tit"><a href="#" target="_blank">干洗店加盟利润分析</a></div>
                 </div>
                 <div class="common_list">
                     <ul>
-                        <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">现在投资开一家干洗店可以赚钱吗</a></li>
-                        <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">经营干洗店有哪些好的方法</a></li>
-                        <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">在南京投资开一家干洗店赚钱吗</a></li>
-                        <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">秋季散装休闲干洗如何储存</a></li>
-                        <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">在南京投资开一家干洗店赚钱吗</a></li>
-                        <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">经营干洗店有哪些好的方法</a></li>
-                        <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">在南京投资开一家干洗店赚钱吗</a></li>
-                        <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">经营干洗店有哪些好的方法</a></li>
-                        <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">秋季散装休闲干洗如何储存</a></li>
-                        <li><a href="#" target="_blank" title="经营干洗店有哪些好的方法">开休闲干洗加盟店日常小道具</a></li>
+                        @foreach($profitArticles as $profitArticle)
+                            <li><a href="/{{ $profitArticle->arctype->real_path}}/{{$profitArticle->id}}.shtml" target="_blank" title="{{$profitArticle->title}}">{{$profitArticle->title}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
             </div>

@@ -128,6 +128,7 @@ Route::group(['domain' => 'm.jisuanqi.com'], function () {
     Route::get('/', 'Mobile\MobileController@Index');
     Route::get('cost', 'Mobile\MobileController@Cost');
     Route::get('profit', 'Mobile\MobileController@Profit');
+    Route::get('{path?}/{id}.shtml','Mobile\MobileController@BrandArticle');
 });
 
 Route::get('/','Frontend\IndexController@Index');
@@ -135,7 +136,5 @@ Route::get('cost','Frontend\IndexController@Cost');
 Route::get('profit','Frontend\IndexController@Profit');
 Route::post('/costcomplate','Frontend\ComplateController@costComplate');
 Route::post('/profitcomplate','Frontend\ComplateController@profitComplate');
-//Route::get('{path}','Frontend\BrandsController@BrandLists');
-//Route::get('{path?}/page/{page}/','Frontend\BrandsController@BrandLists')->name('pagelists');
 Route::get('{path?}/{id}.shtml','Frontend\BrandArticleController@BrandArticle');
 

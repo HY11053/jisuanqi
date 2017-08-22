@@ -29,8 +29,10 @@ class BrandArticleController extends Controller
                 $prev_article = Archive::latest('published_at')->published()->find($this->getPrevArticleId($thisarticleinfos->id));
                 $next_article = Archive::latest('published_at')->published()->find($this->getNextArticleId($thisarticleinfos->id));
                 $published=$thisarticleinfos['attributes']['published_at'];
+                $costArticles=Archive::where('typeid','3')->latest()->take(30)->get();
+                $profitArticles=Archive::where('typeid',2)->latest()->take(30)->get();
                 DB::table('archives')->where('id',$id)->update(['click'=>$thisarticleinfos->click+1,'published_at'=>$published]);
-                return view('frontend.article_article',compact('thisarticleinfos','prev_article','next_article'));
+                return view('frontend.article_article',compact('thisarticleinfos','prev_article','next_article','xgnews','costArticles','profitArticles'));
         }
     }
     protected function getPrevArticleId($id)

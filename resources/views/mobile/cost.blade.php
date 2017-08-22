@@ -1,8 +1,11 @@
 @extends('mobile.mobile')
+@section('title') 干洗店成本计算器2017_2017最新开干洗店成本计算器@stop
+@section('keywords') 干洗店成本,开干洗店成本,干洗店成本计算器,最新开干洗店成本计算器@stop
+@section('description') 干洗店成本计算首选干洗店成本费用计算器，针对干洗的的各项成本投入，给出详细的成本汇总和图标计算方式。了解详细干洗店开店投入成本费用就用干洗店成本计算器@stop
 @section('main_content')
     <div class="container nbgmain">
         <div class="row ">
-            <form class="form-horizontal col-xs-10 col-xs-offset-1 "  onsubmit="return false;">
+            <form class="form-horizontal col-xs-10 col-xs-offset-1 "  onSubmit="return false;">
                 <div class="form-group">
                     <label class="sr-only" for="dpmj">店铺面积</label>
                     <div class="input-group">
@@ -83,10 +86,12 @@
                         <div class="input-group-addon">.00</div>
                     </div>
                 </div>
-                <button type="submit"  id="sub_btn" class="btn btn-primary">费用计算</button>
+                <button type="submit"  id="sub_btn" class="btn btn-primary" style="width:100%">费用计算</button>
             </form>
         </div>
     </div>
+	
+	<div class="container">
     <div class="col-xs-12 " >
         <div class="x_panel">
             <div class="x_title">
@@ -159,52 +164,33 @@
             </div>
         </div>
     </div>
+	</div>
 
     <div class="container">
+		<div class="col-xs-12" >
         <div style="clear:both;"></div>
         <div id="note01" class="mainbottom ">
             <ul>
-                <li class="STYLE2">房贷计算器最新2017：房贷利率已经更新至2017年4月1日</li>
-                <li><strong class="red">等额本息还款：</strong>把按揭贷款的本金总额与利息总额相加，然后平均分摊到还款期限的每个月中。作为还款人，每个月还给银行固定金额，但每月还款额中的本金比重逐月递增、利息比重逐月递减。</li>
-                <li><strong class="red">等额本金还款：</strong>将本金分摊到每个月内,同时付清上一交易日至本次还款日之间的利息。这种还款方式相对等额本息而言,总的利息支出较低,但是前期支付的本金和利息较多,还款负担逐月递减。</li>
-                <li> <strong class="red">2017年公积金贷款最高额度说明（具体规定参考地方房管局文件）</strong><br />
-                    北京：市管公积金贷款最高120万元，国管公积金最高贷款120万元<br />
-                    上海：个人公积金贷款最高60万元，家庭最高贷款120万元<br />
-                    广州：个人公积金贷款最高60万元，夫妻双方最高贷款100万元<br />
-                    成都：个人公积金贷款最高40万元，家庭公积金贷款最高70万元，成都公积金贷款额度为个人缴存余额20倍</li>
+                <li class="STYLE2"><strong>干洗店加盟成本最新2017：</strong>科学计算开一家干洗店成本多少钱</li>
+                <li> 干洗店作为服务性行业的一种，店内的各项条件设施都需要以消费者的实际情况做配置依据。因为不同的店面情况，面对的消费者类型不同，承接的衣物干洗订单不同，对店面空间、设备配置、人员雇佣等情况的要求和标准都会有所不同。所以，想要做相关干洗店成本预算，投资者首先就要对自身店面情况，有一个准确的定位和把握。</li>
+                <li> <strong class="red">主流干洗店规模大小对应干洗店成本</strong><br />
+                    小型干洗店加盟方案：占地面积20㎡左右，全自动变频石油干洗机，全自动烘干机、自动吸风熨烫台、自动电热发生器、熨斗<br />
+                    中型干洗店加盟方案：占地面积40㎡左右，全自动变频石油干洗机，全自动烘干机、自动吸风熨烫台、电脑语音消毒柜、自动电热发生器<br />
+                    大型干洗店加盟方案：占地面积50㎡左右，全自动变频石油干洗机，立式变频洗脱两用机，全自动烘干机、成衣立体包装机，自动吸风熨烫台、电脑语音消毒柜、自动电热发生器<br />
+                    旗舰干洗店投资方案： 占地面积120㎡左右，全自动变频石油干洗机，立式变频洗脱两用机，全自动烘干机、成衣立体包装机，去渍台，衣物输送线，人像机，电脑开票系统</li>
             </ul>
         </div>
-        <div class="f_link">
+        <div class="rec_news">
             <div class="hd">干洗店成本计算器最新资讯</div>
             <div class="bd">
                 <ul>
-                    <li><a href="#" target="_blank">房贷计算器最新2017</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2017</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2017</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2017</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2017</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2017</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                    <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
+                    @foreach($costArticles as $article)
+                        <li><a href="/{{$article->arctype->real_path}}/{{$article->id}}.shtml">{{$article->title}}</a></li>
+                    @endforeach
                 </ul>
             </div>
         </div>
+		</div>
     </div>
 @stop
 @section('libs')

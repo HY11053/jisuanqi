@@ -12,14 +12,13 @@
     <meta name="description" content=" @yield('description') "/>
     <link href="/reception/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="/reception/css/gxd.css" rel="stylesheet" type="text/css" />
-    <meta name="Copyright" content=""/>
-    <meta name="author" content="" />
-    <meta http-equiv="mobile-agent" content="format=wml; url=" />
-    <meta http-equiv="mobile-agent" content="format=xhtml; url=" />
-    <meta http-equiv="mobile-agent" content="format=html5; url=" />
-    <link rel="alternate" media="only screen and(max-width: 640px)" href="" >
-    <link rel="canonical" href=""/>
-    <meta property="og:image" content=""/>
+    <meta name="Copyright" content="干洗店加盟费用计算器"/>
+    <meta name="author" content="干洗店加盟费用计算器" />
+    <meta http-equiv="mobile-agent" content="format=wml; url= {{str_replace('www.','m.',config('app.url','http://m.ganxijsq.com')).Request::getRequestUri()}}" />
+    <meta http-equiv="mobile-agent" content="format=xhtml; url= {{str_replace('www.','m.',config('app.url','http://m.ganxijsq.com')).Request::getRequestUri()}}" />
+    <meta http-equiv="mobile-agent" content="format=html5; url= {{str_replace('www.','m.',config('app.url','http://m.ganxijsq.com')).Request::getRequestUri()}}" />
+    <link rel="alternate" media="only screen and(max-width: 640px)" href= "{{str_replace('www.','m.',config('app.url','http://m.ganxijsq.com')).Request::getRequestUri()}}" >
+    <link rel="canonical" href="{{config('app.url','http://www.ganxijsq.com').Request::getRequestUri()}}"/>
 </head>
 
 <body>

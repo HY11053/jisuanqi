@@ -11,6 +11,7 @@ use App\Overwrite\Paginator;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class MobileController extends Controller
 {
@@ -19,15 +20,20 @@ class MobileController extends Controller
      */
     public function Index()
     {
-     return view('mobile.index');
+        $articlefys=Archive::where('typeid',3)->latest()->take(8)->get();
+        $articlecosts=Archive::where('typeid',2)->latest()->take(8)->get();
+        $articleprofits=Archive::where('typeid',1)->latest()->take(8)->get();
+        return view('mobile.index',compact('flinks','articlefys','articlecosts','articleprofits'));
     }
     public function Cost()
     {
-        return view('mobile.cost');
+        $costArticles=Archive::where('typeid','1')->latest()->take(30)->get();
+        return view('mobile.cost',compact('costArticles'));
     }
     public function Profit()
     {
-        return view('mobile.profit');
+        $profitArticles=Archive::where('typeid',2)->latest()->take(30)->get();
+        return view('mobile.profit',compact('profitArticles'));
     }
     /*
      * 品牌列表页
@@ -81,36 +87,25 @@ class MobileController extends Controller
      * 内容页面
      */
 
-public function BrandArticle(Request $request,$path,$id)
-{
-    preg_match('/[a-zA-Z]+/',$request->path(),$matchs);
-    if (Archive::findOrFail($id)->arctype->real_path!=$matchs[0])
+    function BrandArticle(Request $request,$path,$id)
     {
-        abort(404);
-    }else{
-        if(Archive::findOrFail($id)->mid ==1)
+        preg_match('/[a-zA-Z]+/',$request->path(),$matchs);
+        if (Archive::findOrFail($id)->arctype->real_path!=$matchs[0])
         {
-            $thisarticleinfos=Archive::findOrFail($id);
-            $topbrands=Archive::where('mid',1)->whereIn('typeid',[1,3,4,5,10])->where('published_at','<=',Carbon::now())->orderBy('click','desc')->take(10)->get();
-            $latestbrands=Archive::where('mid',1)->whereIn('typeid',[1,3,4,5,10])->where('published_at','<=',Carbon::now())->latest()->take(20)->get();
-            $comments=Comment::where('archive_id',$thisarticleinfos->id)->where('is_hidden',0)->get();
-            $latesnews=Archive::where('ismake',1)->where('mid','<>',1)->whereIn('typeid',[1,3,4,5,9])->where('published_at','<=',Carbon::now())->latest()->take(10)->get();
-            $xgsearchs=Archive::where('ismake','1')->where('shorttitle','like','%'.$thisarticleinfos->article->brandname.'%')->where('published_at','<=',Carbon::now())->orderBy('click','desc')->take(10)->get();
-            return view('mobile.brand_article',compact('thisarticleinfos','topbrands','latestbrands','comments','latesnews','xgsearchs'));
+            abort(404);
         }else{
+
             $thisarticleinfos=Archive::findOrFail($id);
-            $topbrands=Archive::where('mid',1)->where('published_at','<=',Carbon::now())->orderBy('click','desc')->take(10)->get();
-            $latestbrands=Archive::where('mid',1)->where('published_at','<=',Carbon::now())->latest()->take(20)->get();
+            $xgnews=Archive::where('title','like','%'.$thisarticleinfos->shorttitle.'%')->where('published_at','<=',Carbon::now())->orderBy('click','desc')->take(10)->get();
             $prev_article = Archive::latest('published_at')->published()->find($this->getPrevArticleId($thisarticleinfos->id));
             $next_article = Archive::latest('published_at')->published()->find($this->getNextArticleId($thisarticleinfos->id));
-            $comments=Comment::where('archive_id',$thisarticleinfos->id)->where('is_hidden',0)->get();
-            $latesnews=Archive::where('ismake',1)->where('mid','<>',1)->whereIn('typeid',[1,3,4,5,9])->where('published_at','<=',Carbon::now())->latest()->take(10)->get();
-            $xgsearchs=Archive::where('ismake','1')->where('shorttitle','like','%'.$thisarticleinfos->shorttitle.'%')->where('published_at','<=',Carbon::now())->orderBy('click','desc')->take(10)->get();
-            return view('mobile.article_article',compact('thisarticleinfos','prev_article','next_article','topbrands','comments','latesnews','xgsearchs'));
+            $published=$thisarticleinfos['attributes']['published_at'];
+            $costArticles=Archive::where('typeid','3')->latest()->take(30)->get();
+            $profitArticles=Archive::where('typeid',2)->latest()->take(30)->get();
+            DB::table('archives')->where('id',$id)->update(['click'=>$thisarticleinfos->click+1,'published_at'=>$published]);
+            return view('mobile.news_show',compact('thisarticleinfos','prev_article','next_article','xgnews','costArticles','profitArticles'));
         }
-
     }
-}
     protected function getPrevArticleId($id)
     {
         return Archive::where('id', '<', $id)->max('id');

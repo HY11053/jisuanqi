@@ -179,13 +179,13 @@
             <div id="note01" class="mainbottom ">
                 <ul>
                     <li class="STYLE2">干洗店加盟费用计算器最新2017：干洗店加盟费计算方式已更新至已经更新至2017年8月15日</li>
-                    <li><strong class="red">等额本息还款：</strong>把按揭贷款的本金总额与利息总额相加，然后平均分摊到还款期限的每个月中。作为还款人，每个月还给银行固定金额，但每月还款额中的本金比重逐月递增、利息比重逐月递减。</li>
-                    <li><strong class="red">等额本金还款：</strong>将本金分摊到每个月内,同时付清上一交易日至本次还款日之间的利息。这种还款方式相对等额本息而言,总的利息支出较低,但是前期支付的本金和利息较多,还款负担逐月递减。</li>
-                    <li> <strong class="red">2017年公积金贷款最高额度说明（具体规定参考地方房管局文件）</strong><br />
-                        北京：市管公积金贷款最高120万元，国管公积金最高贷款120万元<br />
-                        上海：个人公积金贷款最高60万元，家庭最高贷款120万元<br />
-                        广州：个人公积金贷款最高60万元，夫妻双方最高贷款100万元<br />
-                        成都：个人公积金贷款最高40万元，家庭公积金贷款最高70万元，成都公积金贷款额度为个人缴存余额20倍</li>
+                    <li><strong class="red">干洗店加盟费：</strong>干洗店加盟到开店的费用包括：设备费用、干洗店面的装修、房租、备用的流动资金、干洗店的人工开支、杂项的工商税务和水电费用。加盟费用一般不同的干洗品牌费用会有一些相差。也有一些免干洗店加盟费的大干洗品牌。可自行选择。</li>
+                    <li><strong class="red">干洗店的设备包括：</strong>石油干洗机、烘干机、熨烫台、自动电热发生器、熨斗、成衣立体包装机、消毒柜。按照型号类型，价格会有所变化。</li>
+                    <li> <strong class="red">2017各类城市干洗店面租金情况：</strong><br />
+                        一线城市：房租店面30㎡在3000-7000元/月，靠近商业区的价格会相对更高。<br />
+                        二线城市：30㎡~60㎡的房租价格2000~5000多，地铁周边商铺区价格要在一万以上。<br />
+                        三线城市：30㎡~60平米左右的店面房租在2000~4000多左右，120㎡以上在5000~7000/月。<br />
+                        乡镇街道：乡镇街道一般为自己的店面，其房租成本也较低。</li>
                 </ul>
             </div>
             <!--说明一 end-->
@@ -199,14 +199,9 @@
                 <div class="hd">2017干洗店加盟费用计算器</div>
                 <div class="bd">
                     <ul>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">2014提前还房贷攻略：两类人可提前还款</a></li>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷转按揭全过程解析 必看注意事项</a></li>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷提前还款怎么办 各大银行违约金吓掉你</a></li>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">三种情况不合适提前还贷 看看你属于哪类</a></li>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">2014提前还房贷攻略：两类人可提前还款</a></li>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷转按揭全过程解析 必看注意事项</a></li>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷提前还款怎么办 各大银行违约金吓掉你</a></li>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">三种情况不合适提前还贷 看看你属于哪类</a></li>
+                        @foreach($articlefys as $articlefy)
+                        <li><a href="{{$articlefy->arctype->real_path}}/{{$articlefy->id}}.shtml" target="_blank" title="{{$articlefy->title}}">{{$articlefy->title}}</a></li>
+                    @endforeach
                     </ul>
                 </div>
             </div>
@@ -215,14 +210,9 @@
                 <div class="hd"><a href="/cost" target="_blank">2017开干洗店成本计算器</a></div>
                 <div class="bd">
                     <ul>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">2014提前还房贷攻略：两类人可提前还款</a></li>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷转按揭全过程解析 必看注意事项</a></li>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷提前还款怎么办 各大银行违约金吓掉你</a></li>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">三种情况不合适提前还贷 看看你属于哪类</a></li>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">2014提前还房贷攻略：两类人可提前还款</a></li>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷转按揭全过程解析 必看注意事项</a></li>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷提前还款怎么办 各大银行违约金吓掉你</a></li>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">三种情况不合适提前还贷 看看你属于哪类</a></li>
+                        @foreach($articlecosts as $articlecost)
+                        <li><a href="/{{$articlecost->arctype->real_path}}/{{ $articlecost->id}}.shtml" target="_blank" title="{{$articlecost->title}}">{{$articlecost->title}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -231,14 +221,9 @@
                 <div class="hd"><a href="/profit" target="_blank">干洗店利润计算器</a></div>
                 <div class="bd">
                     <ul>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">2014提前还房贷攻略：两类人可提前还款</a></li>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷转按揭全过程解析 必看注意事项</a></li>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷提前还款怎么办 各大银行违约金吓掉你</a></li>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">三种情况不合适提前还贷 看看你属于哪类</a></li>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">2014提前还房贷攻略：两类人可提前还款</a></li>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷转按揭全过程解析 必看注意事项</a></li>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷提前还款怎么办 各大银行违约金吓掉你</a></li>
-                        <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">三种情况不合适提前还贷 看看你属于哪类</a></li>
+                        @foreach($articleprofits as $articleprofit)
+                        <li><a href="/{{$articleprofit->arctype->real_path}}/{{$articleprofit->id}}.shtml" target="_blank" title="{{$articleprofit->title}}">{{$articleprofit->title}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -252,18 +237,9 @@
         <div class="hd">友情链接</div>
         <div class="bd">
             <ul>
-                <li><a href="#" target="_blank">房贷计算器最新2017</a></li>
-                <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                <li><a href="#" target="_blank">房贷计算器最新2017</a></li>
-                <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                <li><a href="#" target="_blank">房贷计算器最新2017</a></li>
-                <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                <li><a href="#" target="_blank">房贷计算器最新2017</a></li>
-                <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                <li><a href="#" target="_blank">房贷计算器最新2017</a></li>
-                <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
-                <li><a href="#" target="_blank">房贷计算器最新2017</a></li>
-                <li><a href="#" target="_blank">房贷计算器最新2018</a></li>
+                @foreach($flinks as $flink)
+                <li><a href="{{$flink->weburl}}" target="_blank">{{$flink->webname}}</a></li>
+                @endforeach
             </ul>
         </div>
     </div>

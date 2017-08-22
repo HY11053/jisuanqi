@@ -11,7 +11,7 @@
     <title>@yield('title')-计算器</title>
     <meta name="keywords" content="@yield('keywords')"/>
     <meta name="description" content="@yield('description')"/>
-    <link rel="canonical" href="{{env('APP_URL')}}{{Request::getrequesturi()}}" >
+    <link rel="canonical" href="{{config('app.url','http://www.ganxijsq.com').Request::getRequestUri()}}" >
     <link href="/reception/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="/reception/css/style.css" rel="stylesheet" type="text/css" />
 </head>
@@ -36,7 +36,6 @@
                 <li class="active"><a href="/">干洗店加盟费计算器 <span class="sr-only">(current)</span></a></li>
                 <li><a href="/cost">干洗店成本计算器</a></li>
                 <li><a href="/profit">干洗店利润计算器</a></li>
-                <li><a href="#">干洗技术资料</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -49,11 +48,9 @@
 <script src="/reception/js/validator.js"></script>
 <script src="/reception/js/Chart.min.js"></script>
 <script src="/reception/js/tools.js"></script>
-<div>
-    <hr>
-    <p >Copyright © 2017 www.58lingshi.com Corporation, All Rights Reserved 上海莫卡网络科技有限公司 版权所有</p>
+<div class="footer">
+    <p>Copyright © 2017 www.58lingshi.com Corporation, All Rights Reserved 上海莫卡网络科技有限公司 版权所有</p>
 </div>
 @yield('libs')
-
 </body>
 </html>

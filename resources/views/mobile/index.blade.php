@@ -2,7 +2,7 @@
 @section('main_content')
     <div class="container nbgmain">
         <div class="row ">
-        <form class="form-horizontal col-xs-10 col-xs-offset-1 "  onsubmit="return false;">
+        <form class="form-horizontal col-xs-10 col-xs-offset-1 "  onSubmit="return false;">
             <div class="form-group">
                 <label class="sr-only" for="dpmj">店铺面积</label>
                 <div class="input-group">
@@ -83,10 +83,12 @@
                     <div class="input-group-addon">.00</div>
                 </div>
             </div>
-            <button type="submit"  id="sub_btn" class="btn btn-primary">费用计算</button>
+            <button type="submit"  id="sub_btn" class="btn btn-primary" style="width:100%;">费用计算</button>
         </form>
         </div>
     </div>
+	
+	<div class="container">
     <div class="col-xs-12 " >
         <div class="x_panel">
             <div class="x_title">
@@ -112,46 +114,46 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <th scope="row">装修费用</th>
-                                <td id="zxpay"> 3000</td>
-                                <td id="zxproportion"> %10</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">季度房租</th>
-                                <td id="jdpay"> 3000</td>
-                                <td id="jdproportion"> %10</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">设备费用</th>
-                                <td id="sbpay"> 3000</td>
-                                <td id="sbproportion"> %10</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">流动资金</th>
-                                <td id="ldpay"> 3000</td>
-                                <td id="ldproportion"> %10</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">人工开支</th>
-                                <td id="kzpay"> 3000</td>
-                                <td id="kzproportion"> %10</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">工商税务</th>
-                                <td id="gspay"> 3000</td>
-                                <td id="gsproportion"> %10</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">水电 / 月</th>
-                                <td id="sdpay"> 3000</td>
-                                <td id="sdproportion"> %10</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">加盟费用</th>
-                                <td id="jmpay"> 3000</td>
-                                <td id="jmproportion"> %10</td>
-                            </tr>
+								<tr>
+									<th scope="row">装修费用</th>
+									<td id="zxpay"> 3000</td>
+									<td id="zxproportion"> %10</td>
+								</tr>
+								<tr>
+									<th scope="row">季度房租</th>
+									<td id="jdpay"> 3000</td>
+									<td id="jdproportion"> %10</td>
+								</tr>
+								<tr>
+									<th scope="row">设备费用</th>
+									<td id="sbpay"> 3000</td>
+									<td id="sbproportion"> %10</td>
+								</tr>
+								<tr>
+									<th scope="row">流动资金</th>
+									<td id="ldpay"> 3000</td>
+									<td id="ldproportion"> %10</td>
+								</tr>
+								<tr>
+									<th scope="row">人工开支</th>
+									<td id="kzpay"> 3000</td>
+									<td id="kzproportion"> %10</td>
+								</tr>
+								<tr>
+									<th scope="row">工商税务</th>
+									<td id="gspay"> 3000</td>
+									<td id="gsproportion"> %10</td>
+								</tr>
+								<tr>
+									<th scope="row">水电 / 月</th>
+									<td id="sdpay"> 3000</td>
+									<td id="sdproportion"> %10</td>
+								</tr>
+								<tr>
+									<th scope="row">加盟费用</th>
+									<td id="jmpay"> 3000</td>
+									<td id="jmproportion"> %10</td>
+								</tr>
                             </tbody>
                         </table>
                     </div>
@@ -159,19 +161,21 @@
             </div>
         </div>
     </div>
-
+	</div>
+	
     <div class="container">
+	<div class="col-xs-12">
         <div style="clear:both;"></div>
         <div id="note01" class="mainbottom ">
             <ul>
-                <li class="STYLE2">房贷计算器最新2017：房贷利率已经更新至2017年4月1日</li>
-                <li><strong class="red">等额本息还款：</strong>把按揭贷款的本金总额与利息总额相加，然后平均分摊到还款期限的每个月中。作为还款人，每个月还给银行固定金额，但每月还款额中的本金比重逐月递增、利息比重逐月递减。</li>
-                <li><strong class="red">等额本金还款：</strong>将本金分摊到每个月内,同时付清上一交易日至本次还款日之间的利息。这种还款方式相对等额本息而言,总的利息支出较低,但是前期支付的本金和利息较多,还款负担逐月递减。</li>
-                <li> <strong class="red">2017年公积金贷款最高额度说明（具体规定参考地方房管局文件）</strong><br />
-                    北京：市管公积金贷款最高120万元，国管公积金最高贷款120万元<br />
-                    上海：个人公积金贷款最高60万元，家庭最高贷款120万元<br />
-                    广州：个人公积金贷款最高60万元，夫妻双方最高贷款100万元<br />
-                    成都：个人公积金贷款最高40万元，家庭公积金贷款最高70万元，成都公积金贷款额度为个人缴存余额20倍</li>
+                <li class="STYLE2">干洗店加盟费用计算器最新2017：干洗店加盟费计算方式已更新至已经更新至2017年8月15日</li>
+                <li><strong class="red">干洗店加盟费：</strong>干洗店加盟到开店的费用包括：设备费用、干洗店面的装修、房租、备用的流动资金、干洗店的人工开支、杂项的工商税务和水电费用。加盟费用一般不同的干洗品牌费用会有一些相差。也有一些免干洗店加盟费的大干洗品牌。可自行选择。</li>
+                <li><strong class="red">干洗店的设备包括：</strong>石油干洗机、烘干机、熨烫台、自动电热发生器、熨斗、成衣立体包装机、消毒柜。按照型号类型，价格会有所变化。</li>
+                <li> <strong class="red">2017各类城市干洗店面租金情况：</strong><br />
+                    一线城市：房租店面30㎡在3000-7000元/月，靠近商业区的价格会相对更高。<br />
+                    二线城市：30㎡~60㎡的房租价格2000~5000多，地铁周边商铺区价格要在一万以上。<br />
+                    三线城市：30㎡~60平米左右的店面房租在2000~4000多左右，120㎡以上在5000~7000/月。<br />
+                    乡镇街道：乡镇街道一般为自己的店面，其房租成本也较低。</li>
             </ul>
         </div>
         <!--推荐文章 开始-->
@@ -181,46 +185,31 @@
                     <div class="hd"><a href="#" target="_blank">干洗店加盟费用计算器</a></div>
                     <div class="bd">
                         <ul>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">2014提前还房贷攻略：两类人可提前还款</a></li>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷转按揭全过程解析 必看注意事项</a></li>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷提前还款怎么办 各大银行违约金吓掉你</a></li>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">三种情况不合适提前还贷 看看你属于哪类</a></li>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">2014提前还房贷攻略：两类人可提前还款</a></li>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷转按揭全过程解析 必看注意事项</a></li>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷提前还款怎么办 各大银行违约金吓掉你</a></li>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">三种情况不合适提前还贷 看看你属于哪类</a></li>
+                            @foreach($articlefys as $articlefy)
+                                <li><a href="{{$articlefy->arctype->real_path}}/{{$articlefy->id}}.shtml"  title="{{$articlefy->title}}">{{$articlefy->title}}</a></li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
 
                 <div class="rec_news">
-                    <div class="hd"><a href="#" target="_blank">干洗店加盟费用计算器</a></div>
+                    <div class="hd"><a href="#" target="_blank">干洗店加盟成本计算器</a></div>
                     <div class="bd">
                         <ul>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">2014提前还房贷攻略：两类人可提前还款</a></li>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷转按揭全过程解析 必看注意事项</a></li>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷提前还款怎么办 各大银行违约金吓掉你</a></li>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">三种情况不合适提前还贷 看看你属于哪类</a></li>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">2014提前还房贷攻略：两类人可提前还款</a></li>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷转按揭全过程解析 必看注意事项</a></li>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷提前还款怎么办 各大银行违约金吓掉你</a></li>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">三种情况不合适提前还贷 看看你属于哪类</a></li>
+                            @foreach($articlecosts as $articlecost)
+                                <li><a href="/{{$articlecost->arctype->real_path}}/{{ $articlecost->id}}.shtml"  title="{{$articlecost->title}}">{{$articlecost->title}}</a></li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
 
                 <div class="rec_news">
-                    <div class="hd"><a href="#" target="_blank">干洗店加盟费用计算器</a></div>
+                    <div class="hd"><a href="#" target="_blank">干洗店加盟利润计算器</a></div>
                     <div class="bd">
                         <ul>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">2014提前还房贷攻略：两类人可提前还款</a></li>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷转按揭全过程解析 必看注意事项</a></li>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷提前还款怎么办 各大银行违约金吓掉你</a></li>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">三种情况不合适提前还贷 看看你属于哪类</a></li>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">2014提前还房贷攻略：两类人可提前还款</a></li>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷转按揭全过程解析 必看注意事项</a></li>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">房贷提前还款怎么办 各大银行违约金吓掉你</a></li>
-                            <li><a href="#" target="_blank" title="2014提前还房贷攻略：两类人可提前还款">三种情况不合适提前还贷 看看你属于哪类</a></li>
+                            @foreach($articleprofits as $articleprofit)
+                                <li><a href="/{{$articleprofit->arctype->real_path}}/{{$articleprofit->id}}.shtml"  title="{{$articleprofit->title}}">{{$articleprofit->title}}</a></li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -228,7 +217,7 @@
             </div>
         </div>
         <!--推荐文章 结束-->
-
+		</div>
     </div>
 
 @stop

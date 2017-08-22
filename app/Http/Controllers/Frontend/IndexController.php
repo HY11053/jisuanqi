@@ -13,17 +13,20 @@ class IndexController extends Controller
 {
    public function Index()
     {
-
-        //友情链接
+        $articlefys=Archive::where('typeid',3)->latest()->take(8)->get();
+        $articlecosts=Archive::where('typeid',2)->latest()->take(8)->get();
+        $articleprofits=Archive::where('typeid',1)->latest()->take(8)->get();
         $flinks=flink::latest()->orderBy('created_at','desc')->take(30)->get();
-        return view('frontend.index',compact('flinks'));
+        return view('frontend.index',compact('flinks','articlefys','articlecosts','articleprofits'));
     }
     public function Cost()
     {
-        return view('frontend.cost');
+        $costArticles=Archive::where('typeid','1')->latest()->take(30)->get();
+        return view('frontend.cost',compact('costArticles'));
     }
     public function Profit()
     {
-        return view('frontend.profit');
+        $profitArticles=Archive::where('typeid',2)->latest()->take(30)->get();
+        return view('frontend.profit',compact('profitArticles'));
     }
 }
