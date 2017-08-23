@@ -19,6 +19,7 @@
     <meta http-equiv="mobile-agent" content="format=html5; url= {{str_replace('www.','m.',config('app.url','http://m.ganxijsq.com')).Request::getRequestUri()}}" />
     <link rel="alternate" media="only screen and(max-width: 640px)" href= "{{str_replace('www.','m.',config('app.url','http://m.ganxijsq.com')).Request::getRequestUri()}}" >
     <link rel="canonical" href="{{config('app.url','http://www.ganxijsq.com').Request::getRequestUri()}}"/>
+    @yield('headlibs')
 </head>
 
 <body>

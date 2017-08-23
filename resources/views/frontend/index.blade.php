@@ -2,6 +2,12 @@
 @section('title') {{ config('app.webname', '干洗店加盟费用计算器') }}@stop
 @section('keywords') {{ config('app.keywords', '干洗店加盟费用计算器') }}@stop
 @section('description') {{ config('app.description', '干洗店加盟费用计算器') }}@stop
+@section('headlibs')
+    <!-- ion slider Nice -->
+    <link rel="stylesheet" href="/AdminLTE/plugins/ionslider/ion.rangeSlider.skinNice.css">
+    <!-- bootstrap slider -->
+    <link rel="stylesheet" href="/AdminLTE/plugins/bootstrap-slider/slider.css">
+@stop
 @section('mainContent')
     <div class="leftbk0225">
         <div class="leftbk0225a">
@@ -23,7 +29,8 @@
                             <div class="input-group-addon">店铺面积$</div>
                             <input type="text" class="form-control" id="dpmj" name="dpmj" required="required" type="number" placeholder="店铺面积">
                             <div class="input-group-addon">.㎡</div>
-                        </div>
+                          </div>
+                        <p class="slider form-control"  data-slider-max="200" data-slider-step="5" id="v-slider" data-slider-value="100" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="green"></p>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="zxfy">装修费用</label>
@@ -32,6 +39,7 @@
                             <input type="text" class="form-control" name="zxfy" id="zxfy" required="required" placeholder="装修费用">
                             <div class="input-group-addon">.00</div>
                         </div>
+                        <p class="slider form-control"  data-slider-max="200" data-slider-step="5" id="v-slider" data-slider-value="100" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="green"></p>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="jdfz">季度房租</label>
@@ -40,6 +48,7 @@
                             <input type="text" class="form-control" id="jdfz" name="jdfz" required="required" placeholder="季度房租">
                             <div class="input-group-addon">.00</div>
                         </div>
+                        <p class="slider form-control"  data-slider-max="200" data-slider-step="5" id="v-slider" data-slider-value="100" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="green"></p>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="sbfy">设备费用</label>
@@ -48,6 +57,7 @@
                             <input type="text" class="form-control" id="sbfy" name="sbfy" required="required" placeholder="设备费用">
                             <div class="input-group-addon">.00</div>
                         </div>
+                        <p class="slider form-control"  data-slider-max="200" data-slider-step="5" id="v-slider" data-slider-value="100" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="green"></p>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="ldzj">流动资金</label>
@@ -56,6 +66,7 @@
                             <input type="text" class="form-control" id="ldzj" name="ldzj" required="required" placeholder="流动资金">
                             <div class="input-group-addon">.00</div>
                         </div>
+                        <p class="slider form-control"  data-slider-max="200" data-slider-step="5" id="v-slider" data-slider-value="100" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="green"></p>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="rgkz">人工开支</label>
@@ -64,6 +75,7 @@
                             <input type="text" class="form-control" id="rgkz" name="rgkz" required="required" placeholder="人工开支">
                             <div class="input-group-addon">.00</div>
                         </div>
+                        <p class="slider form-control"  data-slider-max="200" data-slider-step="5" id="v-slider" data-slider-value="100" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="green"></p>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="gssy">工商税务</label>
@@ -72,6 +84,7 @@
                             <input type="text" class="form-control" id="gssy" required="required" placeholder="工商税务">
                             <div class="input-group-addon">.00</div>
                         </div>
+                        <p class="slider form-control"  data-slider-max="200" data-slider-step="5" id="v-slider" data-slider-value="100" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="green"></p>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="sdfy">水电 / 月</label>
@@ -80,6 +93,7 @@
                             <input type="text" class="form-control" id="sdfy" name="sdfy" required="required" placeholder="水电 / 月">
                             <div class="input-group-addon">.00</div>
                         </div>
+                        <p class="slider form-control"  data-slider-max="200" data-slider-step="5" id="v-slider" data-slider-value="100" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="green"></p>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="jmfy">加盟费用</label>
@@ -88,6 +102,7 @@
                             <input type="text" class="form-control" required="required" id="jmfy" name="jmfy" placeholder="加盟费用">
                             <div class="input-group-addon">.00</div>
                         </div>
+                        <p class="slider form-control"  data-slider-max="200" data-slider-step="5" id="v-slider" data-slider-value="100" data-slider-orientation="horizontal" data-slider-selection="before" data-slider-tooltip="show" data-slider-id="green"></p>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="phoneno">验证信息</label>
@@ -247,4 +262,18 @@
 @stop
 @section('libs')
     <script src="/reception/js/chargeTools.js"></script>
+    <!-- Bootstrap slider -->
+    <script src="/AdminLTE/plugins/bootstrap-slider/bootstrap-slider.js"></script>
+    <script>
+        $(function () {
+            /* BOOTSTRAP SLIDER */
+            $('.slider').slider();
+            //console.log($("#v-slider").slider("value"));
+            //$("#dpmj").val($("#v-slider").slider("value"));
+            $("#v-slider").on("slide", function(slideEvt) {
+                $("#dpmj").val(slideEvt.value);
+            });
+            /* ION SLIDER */
+        });
+    </script>
 @stop

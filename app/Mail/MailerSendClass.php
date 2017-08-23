@@ -19,7 +19,7 @@ class MailerSendClass
             $to = '410547658@qq.com';
             $message ->to($to)->subject('邮件测试');
         });*/
-        Mail::queue($views,$data,function($message) use ($user,$subject){
+        Mail::send($views,$data,function($message) use ($user,$subject){
             $message->to($user)->subject($subject);
         });
     }
