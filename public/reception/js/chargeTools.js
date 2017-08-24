@@ -28,7 +28,7 @@ Chart.defaults.global.legend = {
 var ctx = document.getElementById("pieChart");
 var data = {
     datasets: [{
-        data: [120, 50, 140, 180, 100],
+        data: [7000, 5000, 3000, 3000, 500],
         backgroundColor: [
             "#455C73",
             "#9B59B6",
@@ -39,11 +39,12 @@ var data = {
         label: 'My dataset' // for legend
     }],
     labels: [
-        "房租成本",
-        "加盟费用",
-        "人员成本",
-        "设备成本",
-        "Blue"
+        "装修费用",
+        "季度房租",
+        "设备费用",
+        "工商税务",
+        "水电/月",
+        "人工开支"
     ]
 };
 

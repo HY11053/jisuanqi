@@ -14,16 +14,17 @@
 }
 .slider.slider-horizontal {
     width: 100%;
-    height: 20px;
-    margin-bottom: 20px;
+    height: 10px;
+    margin-bottom: 5px;
 }
 .slider.slider-horizontal:last-of-type {
+    margin-top: 5px;
     margin-bottom: 0;
 }
 .slider.slider-horizontal .slider-track {
-    height: 10px;
+    height: 5px;
     width: 100%;
-    margin-top: -5px;
+    margin-top: 0px;
     top: 50%;
     left: 0;
 }
@@ -37,7 +38,7 @@
 .slider.slider-horizontal .slider-tick,
 .slider.slider-horizontal .slider-handle {
     margin-left: -10px;
-    margin-top: -5px;
+    margin-top: -3px;
 }
 .slider.slider-horizontal .slider-tick.triangle,
 .slider.slider-horizontal .slider-handle.triangle {
@@ -186,8 +187,8 @@
 }
 .slider-handle {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     background-color: #444;
     -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
     -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
